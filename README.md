@@ -1,12 +1,53 @@
-# Starter Next/Hardhat Project
+# DecenMessage
 
-After cloning the github, you will want to do the following to get the code running on your computer.
+This Solidity program encapsulates the code for an decentralized messaging system, where anyone can send an anonymous message to a
+particular address, and they can read the message.
 
-1. Inside the project directory, in the terminal type: npm i
-2. Open two additional terminals in your VS code
-3. In the second terminal type: npx hardhat node
-4. In the third terminal, type: npx hardhat run --network localhost scripts/deploy.js
-5. Back in the first terminal, type npm run dev to launch the front-end.
+## Description
 
-After this, the project will be running on your localhost. 
-Typically at http://localhost:3000/
+This solidity program offers anyone to write a message to a particular wallet address on the same blockchain anonymously,and then the user,
+to whom the messgage was sent, can read the message.
+
+### Getting Started
+
+To interact with the contract, you can start-off by cloning this repo and running
+
+```
+npm i
+```
+
+in the terminal to install all the dependencies required.
+
+To compile the code, run:
+
+```
+npx hardhat compile
+```
+
+To deploy the code locally on the harhdat network, run:
+
+```
+npx hardhat node
+```
+
+and then run:
+
+```
+npx hardhat run --network localhost scripts/deploy.js
+```
+
+and then open another terminal to interact with the Token smart contract, type in the terminal
+
+```
+npm run dev
+```
+
+to launch the front-end.
+
+### Authhors
+
+Parth Verma
+
+### License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
