@@ -74,14 +74,6 @@ export default function HomePage() {
     }
   };
 
-  const withdraw = async () => {
-    if (atm) {
-      let tx = await atm.withdraw(1);
-      await tx.wait();
-      getBalance();
-    }
-  };
-
   const initUser = () => {
     // Check to see if user has Metamask
     if (!ethWallet) {
