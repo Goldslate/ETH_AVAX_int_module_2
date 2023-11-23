@@ -10,7 +10,7 @@ export default function HomePage() {
   const [reciever, setReciever] = useState("");
   const [newMessage, setNewMessage] = useState("");
 
-  const contractAddress = "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0";
+  const contractAddress = "0xc5A85Ed4674426F5AdB853c038639CfA12fbbc05";
   const atmABI = atm_abi.abi;
 
   const getWallet = async () => {
@@ -68,9 +68,11 @@ export default function HomePage() {
 
   const sendMessage = async () => {
     if (atm) {
-      let tx = await atm.sendMessage(reciever, newMessage);
+      console.log(`reciever ${reciever}, message: ${newMessage}`);
+      let tx = await atm.sendMessage(reciever, newMessage, {
+        from: account[0],
+      });
       await tx.wait();
-      getBalance();
     }
   };
 
@@ -108,7 +110,7 @@ export default function HomePage() {
   return (
     <main className="container">
       <header>
-        <h1>Welcome to the Metacrafters ATM!</h1>
+        <h1>Welcome to the Decen Message</h1>
       </header>
       {initUser()}
       <style jsx>
