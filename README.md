@@ -1,4 +1,4 @@
-# DecenMessage
+# PeerText
 
 This Solidity program encapsulates the code for an decentralized messaging system, where anyone can send an anonymous message to a
 particular address, and they can read the message.
@@ -44,10 +44,9 @@ npm run dev
 
 to launch the front-end.
 
-### Authhors
+### Authors
 
-Parth Verma
-
+Gaurav Gupta
 ### License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
